@@ -1,0 +1,9 @@
+sources:
+  - iOSApp/Sources
+templates:
+  - tools/sourcery/templates
+output:
+  iOSAppTests/Sources/Mocks/Sourcery 
+args:
+  autoMockableTestableImports:
+    - iOSApp

@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  app
+  
+*/
+
+
+"common_close" = "Close";
+"common_ok" = "OK";
+"common_retry" = "Retry";
+
+"not_set" = "Not set";
+"blog" = "Blog";
+"followers" = "Followers";
+"following" = "Followers";
+
+"git_user_list_screen_title" = "Github Users";
+"git_user_detail_screen_title" = "User Details";
