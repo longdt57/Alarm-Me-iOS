@@ -8,7 +8,7 @@
 import Data
 import DesignSystem
 import Foundation
-import GitUserSample
+import AlarmMe
 import Resolver
 
 extension Resolver: ResolverRegistering {

@@ -7,7 +7,7 @@
 
 import Combine
 @testable import DesignSystem
-@testable import GitUserSample
+@testable import AlarmMe
 import XCTest
 
 class GitUserListViewModelTests: AppXCTestCase {

@@ -6,7 +6,6 @@
 //
 
 import DesignSystem
-import GitUserSample
 import SwiftUI
 
 struct GitUserListCard: View {

@@ -7,7 +7,7 @@
 
 import Combine
 @testable import Data
-@testable import GitUserSample
+@testable import AlarmMe
 import XCTest
 
 class GitUserDetailRepositoryImplTests: XCTestCase {

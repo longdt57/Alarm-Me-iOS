@@ -5,7 +5,6 @@
 //  Created by Long Do on 31/12/2024.
 //
 
-import GitUserSample
 import Resolver
 import SwiftUI
 

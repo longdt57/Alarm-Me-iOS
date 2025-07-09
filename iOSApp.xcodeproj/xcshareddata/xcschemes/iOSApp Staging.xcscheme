@@ -55,8 +55,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D102D6E42D99B27F00FE5A50"
-               BuildableName = "GitUserSampleTests.xctest"
-               BlueprintName = "GitUserSampleTests"
+               BuildableName = "AlarmMeTests.xctest"
+               BlueprintName = "AlarmMeTests"
                ReferencedContainer = "container:iOSApp.xcodeproj">
             </BuildableReference>
          </TestableReference>

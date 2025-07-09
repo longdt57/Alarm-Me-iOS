@@ -6,7 +6,7 @@
 //
 
 import Alamofire
-@testable import GitUserSample
+@testable import AlarmMe
 import XCTest
 
 class GitUserConfigurationTests: XCTestCase {

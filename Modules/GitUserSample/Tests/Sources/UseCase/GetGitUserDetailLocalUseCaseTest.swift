@@ -6,7 +6,7 @@
 //
 
 import Combine
-@testable import GitUserSample
+@testable import AlarmMe
 import XCTest
 
 class GetGitUserDetailLocalUseCaseTests: XCTestCase {

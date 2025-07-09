@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import GitUserSample
+@testable import AlarmMe
 
 public enum MockUtil {
     public static let login = "longdt57"

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import GitUserSample
 
 struct GitUserListUiModel {
 

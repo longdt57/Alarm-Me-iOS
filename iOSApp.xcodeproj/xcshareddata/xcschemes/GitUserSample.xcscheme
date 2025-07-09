@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D102D6C42D99B27600FE5A50"
-               BuildableName = "GitUserSample.framework"
-               BlueprintName = "GitUserSample"
+               BuildableName = "AlarmMe.framework"
+               BlueprintName = "AlarmMe"
                ReferencedContainer = "container:iOSApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

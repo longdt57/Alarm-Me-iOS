@@ -5,7 +5,7 @@
 //  Created by Long Do on 02/01/2025.
 //
 
-@testable import GitUserSample
+@testable import AlarmMe
 import RealmSwift
 import XCTest
 

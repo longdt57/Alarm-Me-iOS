@@ -1,9 +1,9 @@
 import SwiftUI
 
-import GitUserSample
+import AlarmMe
 
 @main
-struct iOSApp: App {
+struct AlarmMe: App {
     var body: some Scene {
         WindowGroup {
             GitUserListScreen()

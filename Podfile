@@ -71,12 +71,12 @@ target 'Data' do
   end
 end
 
-target 'GitUserSample' do
+target 'AlarmMe' do
   data_dependencies
   pod 'R.swift'
   pod 'Resolver'
 
-  target 'GitUserSampleTests' do
+  target 'AlarmMeTests' do
     inherit! :search_paths
     testing_pods
     pod 'AlertToast'
