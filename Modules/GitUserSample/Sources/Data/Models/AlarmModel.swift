@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class AlarmModel: Object, Codable {
+public class AlarmModel: Object, Codable {
     @Persisted(primaryKey: true) var id: Int
     @Persisted var audio: AlarmAudioModel?
     @Persisted var createdAt: String?
@@ -21,7 +21,7 @@ class AlarmModel: Object, Codable {
     @Persisted var vibrate: Bool?
     
     // MARK: - Ignored Properties
-    override static func ignoredProperties() -> [String] {
+    public override static func ignoredProperties() -> [String] {
         return ["timeInMinutes", "soundUri", "displayTime"]
     }
     

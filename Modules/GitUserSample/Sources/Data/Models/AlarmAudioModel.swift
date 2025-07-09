@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class AlarmAudioModel: Object, Codable {
+public class AlarmAudioModel: Object, Codable {
     @Persisted(primaryKey: true) var id: Int
     @Persisted var durationS: Int?
     @Persisted var fileUrl: String?
@@ -17,5 +17,14 @@ class AlarmAudioModel: Object, Codable {
     // Codable keys (optional if JSON matches property names)
     private enum CodingKeys: String, CodingKey {
         case id, durationS = "duration_s", fileUrl = "file_url", title
+    }
+    
+    // MARK: - Custom Initializer
+    convenience init(id: Int, durationS: Int?, fileUrl: String?, title: String?) {
+        self.init()
+        self.id = id
+        self.durationS = durationS
+        self.fileUrl = fileUrl
+        self.title = title
     }
 }

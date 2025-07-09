@@ -77,6 +77,16 @@
 		D192C4FD2E1E24AE0019A118 /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C4FC2E1E24AA0019A118 /* AlarmModel.swift */; };
 		D192C4FF2E1E251C0019A118 /* AlarmAudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C4FE2E1E25160019A118 /* AlarmAudioModel.swift */; };
 		D192C5032E1E26920019A118 /* DatetimeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C5022E1E26890019A118 /* DatetimeUtil.swift */; };
+		D192C5062E1E2B9B0019A118 /* AlarmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C5052E1E2B920019A118 /* AlarmRepository.swift */; };
+		D192C5082E1E2BE60019A118 /* AlarmRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C5072E1E2BE10019A118 /* AlarmRepositoryImpl.swift */; };
+		D192C50A2E1E334F0019A118 /* AlarmLocalSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C5092E1E334B0019A118 /* AlarmLocalSource.swift */; };
+		D192C50C2E1E33C70019A118 /* AlarmAudioLocalSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C50B2E1E33C20019A118 /* AlarmAudioLocalSource.swift */; };
+		D192C50F2E1E371D0019A118 /* CreateAlarmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C50D2E1E36D00019A118 /* CreateAlarmUseCase.swift */; };
+		D192C5122E1E37C70019A118 /* AlarmClockHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C5112E1E37C30019A118 /* AlarmClockHelper.swift */; };
+		D192C5152E1E39650019A118 /* DeleteAlarmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C5142E1E395E0019A118 /* DeleteAlarmUseCase.swift */; };
+		D192C5172E1E3C660019A118 /* GetAlarmByIdUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C5162E1E3C650019A118 /* GetAlarmByIdUseCase.swift */; };
+		D192C5192E1E3CA70019A118 /* ObserveAlarmsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C5182E1E3CA50019A118 /* ObserveAlarmsUseCase.swift */; };
+		D192C51B2E1E3CF20019A118 /* UpdateAlarmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C51A2E1E3CF10019A118 /* UpdateAlarmUseCase.swift */; };
 		D1DD02DA2E16D0FC00148CE6 /* GitUserDetailUiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD02D32E16D0FC00148CE6 /* GitUserDetailUiModel.swift */; };
 		D1DD02DB2E16D0FC00148CE6 /* GitUserListUiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD02D42E16D0FC00148CE6 /* GitUserListUiModel.swift */; };
 		D1DD02DD2E16D0FC00148CE6 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = D1DD02D22E16D0FC00148CE6 /* .gitkeep */; };
@@ -383,6 +393,16 @@
 		D192C4FC2E1E24AA0019A118 /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
 		D192C4FE2E1E25160019A118 /* AlarmAudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmAudioModel.swift; sourceTree = "<group>"; };
 		D192C5022E1E26890019A118 /* DatetimeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatetimeUtil.swift; sourceTree = "<group>"; };
+		D192C5052E1E2B920019A118 /* AlarmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRepository.swift; sourceTree = "<group>"; };
+		D192C5072E1E2BE10019A118 /* AlarmRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmRepositoryImpl.swift; sourceTree = "<group>"; };
+		D192C5092E1E334B0019A118 /* AlarmLocalSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmLocalSource.swift; sourceTree = "<group>"; };
+		D192C50B2E1E33C20019A118 /* AlarmAudioLocalSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmAudioLocalSource.swift; sourceTree = "<group>"; };
+		D192C50D2E1E36D00019A118 /* CreateAlarmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlarmUseCase.swift; sourceTree = "<group>"; };
+		D192C5112E1E37C30019A118 /* AlarmClockHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmClockHelper.swift; sourceTree = "<group>"; };
+		D192C5142E1E395E0019A118 /* DeleteAlarmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlarmUseCase.swift; sourceTree = "<group>"; };
+		D192C5162E1E3C650019A118 /* GetAlarmByIdUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlarmByIdUseCase.swift; sourceTree = "<group>"; };
+		D192C5182E1E3CA50019A118 /* ObserveAlarmsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveAlarmsUseCase.swift; sourceTree = "<group>"; };
+		D192C51A2E1E3CF10019A118 /* UpdateAlarmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAlarmUseCase.swift; sourceTree = "<group>"; };
 		D1DD02D22E16D0FC00148CE6 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		D1DD02D32E16D0FC00148CE6 /* GitUserDetailUiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserDetailUiModel.swift; sourceTree = "<group>"; };
 		D1DD02D42E16D0FC00148CE6 /* GitUserListUiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserListUiModel.swift; sourceTree = "<group>"; };
@@ -904,6 +924,11 @@
 		ACA86EBC8D9ACD1405484059 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				D192C51A2E1E3CF10019A118 /* UpdateAlarmUseCase.swift */,
+				D192C5182E1E3CA50019A118 /* ObserveAlarmsUseCase.swift */,
+				D192C5162E1E3C650019A118 /* GetAlarmByIdUseCase.swift */,
+				D192C50D2E1E36D00019A118 /* CreateAlarmUseCase.swift */,
+				D192C5142E1E395E0019A118 /* DeleteAlarmUseCase.swift */,
 				D181921D2D24382F003103D1 /* GitUser */,
 			);
 			path = UseCases;
@@ -1101,6 +1126,7 @@
 		D181919C2D22CAF2003103D1 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				D192C5072E1E2BE10019A118 /* AlarmRepositoryImpl.swift */,
 				D18191A52D22D093003103D1 /* GitUserRepositoryImpl.swift */,
 				D18192112D2436FF003103D1 /* GitUserDetailRepositoryImpl.swift */,
 			);
@@ -1127,6 +1153,8 @@
 		D181920E2D2436C3003103D1 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				D192C50B2E1E33C20019A118 /* AlarmAudioLocalSource.swift */,
+				D192C5092E1E334B0019A118 /* AlarmLocalSource.swift */,
 				D181920C2D2436C3003103D1 /* GitUserDetailLocalSource.swift */,
 				D181920D2D2436C3003103D1 /* GitUserLocalSource.swift */,
 			);
@@ -1136,6 +1164,7 @@
 		D18192152D2437C0003103D1 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				D192C5052E1E2B920019A118 /* AlarmRepository.swift */,
 				D18192172D2437E6003103D1 /* GitUserDetailRepository.swift */,
 				D18192162D2437E6003103D1 /* GitUserRepository.swift */,
 			);
@@ -1206,6 +1235,7 @@
 		D192C5002E1E26740019A118 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				D192C5102E1E37BA0019A118 /* Helper */,
 				D192C5012E1E26810019A118 /* Utils */,
 			);
 			path = Support;
@@ -1217,6 +1247,14 @@
 				D192C5022E1E26890019A118 /* DatetimeUtil.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D192C5102E1E37BA0019A118 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D192C5112E1E37C30019A118 /* AlarmClockHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		D1DD02D52E16D0FC00148CE6 /* Models */ = {
@@ -1782,9 +1820,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-iOSApp-iOSAppKIFUITests/Pods-iOSApp-iOSAppKIFUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-iOSApp-iOSAppKIFUITests/Pods-iOSApp-iOSAppKIFUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1843,9 +1885,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DesignSystem-DesignSystemTests/Pods-DesignSystem-DesignSystemTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DesignSystem-DesignSystemTests/Pods-DesignSystem-DesignSystemTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1878,9 +1924,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-iOSAppTests/Pods-iOSAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-iOSAppTests/Pods-iOSAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1977,9 +2027,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-iOSApp/Pods-iOSApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-iOSApp/Pods-iOSApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2158,9 +2212,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AlarmMeTests/Pods-AlarmMeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AlarmMeTests/Pods-AlarmMeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2197,9 +2255,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Data-DataTests/Pods-Data-DataTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Data-DataTests/Pods-Data-DataTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2295,18 +2357,25 @@
 			files = (
 				D1DD02FE2E16D81500148CE6 /* GitUserListViewModel.swift in Sources */,
 				D1DD02FF2E16D81500148CE6 /* GitUserDetailLocation.swift in Sources */,
+				D192C50A2E1E334F0019A118 /* AlarmLocalSource.swift in Sources */,
 				D1DD03002E16D81500148CE6 /* GitUserDetailAction.swift in Sources */,
 				D1DD03012E16D81500148CE6 /* GitUserDetailFollows.swift in Sources */,
 				D1DD03022E16D81500148CE6 /* GitUserDetailCard.swift in Sources */,
 				D1DD03032E16D81500148CE6 /* GitUserDetailBlog.swift in Sources */,
+				D192C5172E1E3C660019A118 /* GetAlarmByIdUseCase.swift in Sources */,
 				D1DD03042E16D81500148CE6 /* GitUserListCard.swift in Sources */,
 				D1DD03052E16D81500148CE6 /* GitUserListEmpty.swift in Sources */,
+				D192C5192E1E3CA70019A118 /* ObserveAlarmsUseCase.swift in Sources */,
 				D1DD03062E16D81500148CE6 /* GitUserListAction.swift in Sources */,
 				D1DD03072E16D81500148CE6 /* GitUserListItem.swift in Sources */,
+				D192C51B2E1E3CF20019A118 /* UpdateAlarmUseCase.swift in Sources */,
+				D192C5082E1E2BE60019A118 /* AlarmRepositoryImpl.swift in Sources */,
 				D1DD03082E16D81500148CE6 /* GitUserList.swift in Sources */,
 				D1DD03092E16D81500148CE6 /* GitUserDetailViewModel.swift in Sources */,
 				D1DD030A2E16D81500148CE6 /* GitUserListScreen.swift in Sources */,
 				D1DD030B2E16D81500148CE6 /* GitUserDetailScreen.swift in Sources */,
+				D192C5152E1E39650019A118 /* DeleteAlarmUseCase.swift in Sources */,
+				D192C5122E1E37C70019A118 /* AlarmClockHelper.swift in Sources */,
 				D102D6C92D99B27600FE5A50 /* GitUserDetailModel.swift in Sources */,
 				D102D6CA2D99B27600FE5A50 /* GetGitUserDetailRemoteUseCase.swift in Sources */,
 				D102D6CB2D99B27600FE5A50 /* GitUserRepository.swift in Sources */,
@@ -2321,9 +2390,12 @@
 				D192C4FF2E1E251C0019A118 /* AlarmAudioModel.swift in Sources */,
 				D1DD02E22E16D1C700148CE6 /* FollowerFormatter.swift in Sources */,
 				D1DD03232E16E07B00148CE6 /* R.generated.swift in Sources */,
+				D192C50C2E1E33C70019A118 /* AlarmAudioLocalSource.swift in Sources */,
+				D192C50F2E1E371D0019A118 /* CreateAlarmUseCase.swift in Sources */,
 				D1DD02E32E16D1C700148CE6 /* GitUserDetailUiMapper.swift in Sources */,
 				D102D6D32D99B27600FE5A50 /* GetGitUserDetailLocalUseCase.swift in Sources */,
 				D102D6D42D99B27600FE5A50 /* GetGitUserUseCase.swift in Sources */,
+				D192C5062E1E2B9B0019A118 /* AlarmRepository.swift in Sources */,
 				D1DD030E2E16DA8E00148CE6 /* GitUserModule.swift in Sources */,
 				D192C4FD2E1E24AE0019A118 /* AlarmModel.swift in Sources */,
 				D1DD02DA2E16D0FC00148CE6 /* GitUserDetailUiModel.swift in Sources */,
