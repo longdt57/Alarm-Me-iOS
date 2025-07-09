@@ -5,6 +5,7 @@
 //  Created by Long Do on 9/7/25.
 //
 
+import Combine
 import Foundation
 
 final class UpdateAlarmUseCase {
@@ -19,12 +20,23 @@ final class UpdateAlarmUseCase {
         self.alarmClockHelper = alarmClockHelper
     }
     
-    func execute(_ newAlarm: AlarmModel) async throws -> AlarmModel {
-        let result = try await alarmRepository.updateAlarm(newAlarm)
-        alarmClockHelper.cancelAlarm(newAlarm)
-        if newAlarm.isEnabled {
-            alarmClockHelper.setupAlarmClock(newAlarm)
+    func invoke(_ newAlarm: AlarmModel) -> AnyPublisher<AlarmModel, Error> {
+        return Future<AlarmModel, Error> { [weak self] promise in
+            guard let self = self else { return }
+            
+            Task {
+                do {
+                    let result = try await self.alarmRepository.updateAlarm(newAlarm)
+                    self.alarmClockHelper.cancelAlarm(newAlarm)
+                    if newAlarm.isEnabled {
+                        self.alarmClockHelper.setupAlarmClock(newAlarm)
+                    }
+                    promise(.success(result))
+                } catch {
+                    promise(.failure(error))
+                }
+            }
         }
-        return result
+        .eraseToAnyPublisher()
     }
 }

@@ -28,7 +28,6 @@ final class AlarmRepositoryImpl: AlarmRepository {
     
     func observeAlarms() -> AnyPublisher<[AlarmModel], Never> {
         alarmLocalSource.observeAlarms()
-            .collectionPublisher
             .map { Array($0) }
             .replaceError(with: []) // suppress any Realm error
             .eraseToAnyPublisher()

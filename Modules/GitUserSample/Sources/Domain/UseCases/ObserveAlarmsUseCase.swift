@@ -15,7 +15,8 @@ final class ObserveAlarmsUseCase {
         self.alarmRepository = alarmRepository
     }
     
-    func execute() -> AnyPublisher<[AlarmModel], Never> {
+    func invoke() -> AnyPublisher<[AlarmModel], Never> {
         alarmRepository.observeAlarms()
+            .eraseToAnyPublisher()
     }
 }

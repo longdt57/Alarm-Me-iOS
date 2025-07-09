@@ -6,7 +6,7 @@ import AlarmMe
 struct AlarmMe: App {
     var body: some Scene {
         WindowGroup {
-            GitUserListScreen()
+            AlarmScreen()
         }
     }
 }

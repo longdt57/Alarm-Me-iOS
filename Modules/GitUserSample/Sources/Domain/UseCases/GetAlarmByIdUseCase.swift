@@ -14,7 +14,7 @@ final class GetAlarmByIdUseCase {
         self.alarmRepository = alarmRepository
     }
     
-    func execute(id: Int) async throws -> AlarmModel? {
+    func invoke(id: Int) async throws -> AlarmModel? {
         try await alarmRepository.getAlarmById(id: id)
     }
 }

@@ -50,9 +50,51 @@ struct _R {
     }
 
 
-    /// This `_R.string.localizable` struct is generated, and contains static references to 9 localization keys.
+    /// This `_R.string.localizable` struct is generated, and contains static references to 47 localization keys.
     struct localizable {
       let source: RswiftResources.StringResource.Source
+
+      /// en translation: Alarm
+      ///
+      /// Key: alarm
+      ///
+      /// Locales: en
+      var alarm: RswiftResources.StringResource { .init(key: "alarm", tableName: "Localizable", source: source, developmentValue: "Alarm", comment: nil) }
+
+      /// en translation: Alarm Me
+      ///
+      /// Key: alarm_me
+      ///
+      /// Locales: en
+      var alarm_me: RswiftResources.StringResource { .init(key: "alarm_me", tableName: "Localizable", source: source, developmentValue: "Alarm Me", comment: nil) }
+
+      /// en translation: To display a popup when the alarm rings, permission to show notifications is required.
+      ///
+      /// Key: alert_permission_post_notifications_text
+      ///
+      /// Locales: en
+      var alert_permission_post_notifications_text: RswiftResources.StringResource { .init(key: "alert_permission_post_notifications_text", tableName: "Localizable", source: source, developmentValue: "To display a popup when the alarm rings, permission to show notifications is required.", comment: nil) }
+
+      /// en translation: Permissions to show notifications
+      ///
+      /// Key: alert_permission_post_notifications_title
+      ///
+      /// Locales: en
+      var alert_permission_post_notifications_title: RswiftResources.StringResource { .init(key: "alert_permission_post_notifications_title", tableName: "Localizable", source: source, developmentValue: "Permissions to show notifications", comment: nil) }
+
+      /// en translation: You must allow the app displaying full screen notifications, else you may miss some reminders.
+      ///
+      /// Key: allow_full_screen_notifications_reminders
+      ///
+      /// Locales: en
+      var allow_full_screen_notifications_reminders: RswiftResources.StringResource { .init(key: "allow_full_screen_notifications_reminders", tableName: "Localizable", source: source, developmentValue: "You must allow the app displaying full screen notifications, else you may miss some reminders.", comment: nil) }
+
+      /// en translation: You must allow the app displaying notifications, else it cannot show reminders.
+      ///
+      /// Key: allow_notifications_reminders
+      ///
+      /// Locales: en
+      var allow_notifications_reminders: RswiftResources.StringResource { .init(key: "allow_notifications_reminders", tableName: "Localizable", source: source, developmentValue: "You must allow the app displaying notifications, else it cannot show reminders.", comment: nil) }
 
       /// en translation: Blog
       ///
@@ -60,6 +102,13 @@ struct _R {
       ///
       /// Locales: en
       var blog: RswiftResources.StringResource { .init(key: "blog", tableName: "Localizable", source: source, developmentValue: "Blog", comment: nil) }
+
+      /// en translation: Cancel
+      ///
+      /// Key: cancel
+      ///
+      /// Locales: en
+      var cancel: RswiftResources.StringResource { .init(key: "cancel", tableName: "Localizable", source: source, developmentValue: "Cancel", comment: nil) }
 
       /// en translation: Close
       ///
@@ -82,6 +131,41 @@ struct _R {
       /// Locales: en
       var common_retry: RswiftResources.StringResource { .init(key: "common_retry", tableName: "Localizable", source: source, developmentValue: "Retry", comment: nil) }
 
+      /// en translation: Delete
+      ///
+      /// Key: delete
+      ///
+      /// Locales: en
+      var delete: RswiftResources.StringResource { .init(key: "delete", tableName: "Localizable", source: source, developmentValue: "Delete", comment: nil) }
+
+      /// en translation: Dismiss
+      ///
+      /// Key: dismiss
+      ///
+      /// Locales: en
+      var dismiss: RswiftResources.StringResource { .init(key: "dismiss", tableName: "Localizable", source: source, developmentValue: "Dismiss", comment: nil) }
+
+      /// en translation: Every weekday
+      ///
+      /// Key: every_weekday
+      ///
+      /// Locales: en
+      var every_weekday: RswiftResources.StringResource { .init(key: "every_weekday", tableName: "Localizable", source: source, developmentValue: "Every weekday", comment: nil) }
+
+      /// en translation: Every weekend
+      ///
+      /// Key: every_weekend
+      ///
+      /// Locales: en
+      var every_weekend: RswiftResources.StringResource { .init(key: "every_weekend", tableName: "Localizable", source: source, developmentValue: "Every weekend", comment: nil) }
+
+      /// en translation: Everyday
+      ///
+      /// Key: everyday
+      ///
+      /// Locales: en
+      var everyday: RswiftResources.StringResource { .init(key: "everyday", tableName: "Localizable", source: source, developmentValue: "Everyday", comment: nil) }
+
       /// en translation: Followers
       ///
       /// Key: followers
@@ -95,6 +179,20 @@ struct _R {
       ///
       /// Locales: en
       var following: RswiftResources.StringResource { .init(key: "following", tableName: "Localizable", source: source, developmentValue: "Followers", comment: nil) }
+
+      /// en translation: Fri
+      ///
+      /// Key: fri
+      ///
+      /// Locales: en
+      var fri: RswiftResources.StringResource { .init(key: "fri", tableName: "Localizable", source: source, developmentValue: "Fri", comment: nil) }
+
+      /// en translation: Friday
+      ///
+      /// Key: friday
+      ///
+      /// Locales: en
+      var friday: RswiftResources.StringResource { .init(key: "friday", tableName: "Localizable", source: source, developmentValue: "Friday", comment: nil) }
 
       /// en translation: User Details
       ///
@@ -110,12 +208,180 @@ struct _R {
       /// Locales: en
       var git_user_list_screen_title: RswiftResources.StringResource { .init(key: "git_user_list_screen_title", tableName: "Localizable", source: source, developmentValue: "Github Users", comment: nil) }
 
+      /// en translation: Label
+      ///
+      /// Key: label
+      ///
+      /// Locales: en
+      var label: RswiftResources.StringResource { .init(key: "label", tableName: "Localizable", source: source, developmentValue: "Label", comment: nil) }
+
+      /// en translation: Missed Alarm
+      ///
+      /// Key: missed_alarm
+      ///
+      /// Locales: en
+      var missed_alarm: RswiftResources.StringResource { .init(key: "missed_alarm", tableName: "Localizable", source: source, developmentValue: "Missed Alarm", comment: nil) }
+
+      /// en translation: Mon
+      ///
+      /// Key: mon
+      ///
+      /// Locales: en
+      var mon: RswiftResources.StringResource { .init(key: "mon", tableName: "Localizable", source: source, developmentValue: "Mon", comment: nil) }
+
+      /// en translation: Monday
+      ///
+      /// Key: monday
+      ///
+      /// Locales: en
+      var monday: RswiftResources.StringResource { .init(key: "monday", tableName: "Localizable", source: source, developmentValue: "Monday", comment: nil) }
+
+      /// en translation: Never
+      ///
+      /// Key: never
+      ///
+      /// Locales: en
+      var never: RswiftResources.StringResource { .init(key: "never", tableName: "Localizable", source: source, developmentValue: "Never", comment: nil) }
+
+      /// en translation: No alarms
+      ///
+      /// Key: no_alarms
+      ///
+      /// Locales: en
+      var no_alarms: RswiftResources.StringResource { .init(key: "no_alarms", tableName: "Localizable", source: source, developmentValue: "No alarms", comment: nil) }
+
       /// en translation: Not set
       ///
       /// Key: not_set
       ///
       /// Locales: en
       var not_set: RswiftResources.StringResource { .init(key: "not_set", tableName: "Localizable", source: source, developmentValue: "Not set", comment: nil) }
+
+      /// en translation: OK
+      ///
+      /// Key: ok
+      ///
+      /// Locales: en
+      var ok: RswiftResources.StringResource { .init(key: "ok", tableName: "Localizable", source: source, developmentValue: "OK", comment: nil) }
+
+      /// en translation: Optional
+      ///
+      /// Key: optional
+      ///
+      /// Locales: en
+      var optional: RswiftResources.StringResource { .init(key: "optional", tableName: "Localizable", source: source, developmentValue: "Optional", comment: nil) }
+
+      /// en translation: Repeat
+      ///
+      /// Key: repeat
+      ///
+      /// Locales: en
+      var `repeat`: RswiftResources.StringResource { .init(key: "repeat", tableName: "Localizable", source: source, developmentValue: "Repeat", comment: nil) }
+
+      /// en translation: Sat
+      ///
+      /// Key: sat
+      ///
+      /// Locales: en
+      var sat: RswiftResources.StringResource { .init(key: "sat", tableName: "Localizable", source: source, developmentValue: "Sat", comment: nil) }
+
+      /// en translation: Saturday
+      ///
+      /// Key: saturday
+      ///
+      /// Locales: en
+      var saturday: RswiftResources.StringResource { .init(key: "saturday", tableName: "Localizable", source: source, developmentValue: "Saturday", comment: nil) }
+
+      /// en translation: Save
+      ///
+      /// Key: save
+      ///
+      /// Locales: en
+      var save: RswiftResources.StringResource { .init(key: "save", tableName: "Localizable", source: source, developmentValue: "Save", comment: nil) }
+
+      /// en translation: Setup Alarm
+      ///
+      /// Key: setup_alarm
+      ///
+      /// Locales: en
+      var setup_alarm: RswiftResources.StringResource { .init(key: "setup_alarm", tableName: "Localizable", source: source, developmentValue: "Setup Alarm", comment: nil) }
+
+      /// en translation: Snooze
+      ///
+      /// Key: snooze
+      ///
+      /// Locales: en
+      var snooze: RswiftResources.StringResource { .init(key: "snooze", tableName: "Localizable", source: source, developmentValue: "Snooze", comment: nil) }
+
+      /// en translation: Sound
+      ///
+      /// Key: sound
+      ///
+      /// Locales: en
+      var sound: RswiftResources.StringResource { .init(key: "sound", tableName: "Localizable", source: source, developmentValue: "Sound", comment: nil) }
+
+      /// en translation: Stop
+      ///
+      /// Key: stop
+      ///
+      /// Locales: en
+      var stop: RswiftResources.StringResource { .init(key: "stop", tableName: "Localizable", source: source, developmentValue: "Stop", comment: nil) }
+
+      /// en translation: Sun
+      ///
+      /// Key: sun
+      ///
+      /// Locales: en
+      var sun: RswiftResources.StringResource { .init(key: "sun", tableName: "Localizable", source: source, developmentValue: "Sun", comment: nil) }
+
+      /// en translation: Sunday
+      ///
+      /// Key: sunday
+      ///
+      /// Locales: en
+      var sunday: RswiftResources.StringResource { .init(key: "sunday", tableName: "Localizable", source: source, developmentValue: "Sunday", comment: nil) }
+
+      /// en translation: Thu
+      ///
+      /// Key: thu
+      ///
+      /// Locales: en
+      var thu: RswiftResources.StringResource { .init(key: "thu", tableName: "Localizable", source: source, developmentValue: "Thu", comment: nil) }
+
+      /// en translation: Thursday
+      ///
+      /// Key: thursday
+      ///
+      /// Locales: en
+      var thursday: RswiftResources.StringResource { .init(key: "thursday", tableName: "Localizable", source: source, developmentValue: "Thursday", comment: nil) }
+
+      /// en translation: Tue
+      ///
+      /// Key: tue
+      ///
+      /// Locales: en
+      var tue: RswiftResources.StringResource { .init(key: "tue", tableName: "Localizable", source: source, developmentValue: "Tue", comment: nil) }
+
+      /// en translation: Tuesday
+      ///
+      /// Key: tuesday
+      ///
+      /// Locales: en
+      var tuesday: RswiftResources.StringResource { .init(key: "tuesday", tableName: "Localizable", source: source, developmentValue: "Tuesday", comment: nil) }
+
+      /// en translation: Wed
+      ///
+      /// Key: wed
+      ///
+      /// Locales: en
+      var wed: RswiftResources.StringResource { .init(key: "wed", tableName: "Localizable", source: source, developmentValue: "Wed", comment: nil) }
+
+      /// en translation: Wednesday
+      ///
+      /// Key: wednesday
+      ///
+      /// Locales: en
+      var wednesday: RswiftResources.StringResource { .init(key: "wednesday", tableName: "Localizable", source: source, developmentValue: "Wednesday", comment: nil) }
     }
   }
 

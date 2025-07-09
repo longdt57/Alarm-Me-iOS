@@ -6,9 +6,10 @@
 //
 
 import RealmSwift
+import Combine
 
 protocol AlarmLocalSource {
-    func observeAlarms() -> Results<AlarmModel>
+    func observeAlarms() -> AnyPublisher<[AlarmModel], Error>
     func getEnabledAlarms() -> [AlarmModel]
     func getAlarmById(_ id: Int) -> AlarmModel?
     func upsert(_ alarm: AlarmModel) throws
@@ -16,16 +17,24 @@ protocol AlarmLocalSource {
     func setEnable(_ id: Int, _ enable: Bool) throws
 }
 
-class AlarmLocalSourceImpl: AlarmLocalSource {
-    init() {}
+public class AlarmLocalSourceImpl: AlarmLocalSource {
+    public init() {}
     
     private func getRealm() throws -> Realm {
-        try Realm()
+        try! Realm()
     }
     
-    func observeAlarms() -> Results<AlarmModel> {
+    func observeAlarms() -> AnyPublisher<[AlarmModel], Error> {
         let realm = try! getRealm()
-        return realm.objects(AlarmModel.self)
+        let results = realm.objects(AlarmModel.self)
+        
+        return results
+            .collectionPublisher
+            .map { alarms in
+                alarms.freeze().map { $0 } // freeze for thread-safety
+            }
+            .mapError { $0 as Error }
+            .eraseToAnyPublisher()
     }
     
     func getEnabledAlarms() -> [AlarmModel] {

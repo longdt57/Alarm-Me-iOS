@@ -73,6 +73,11 @@
 		D102D7082D99B32000FE5A50 /* AlarmMe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D102D6E22D99B27600FE5A50 /* AlarmMe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D104DBD42E182B5F007D9A7A /* SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D104DBD32E182B5C007D9A7A /* SampleTests.swift */; };
 		D1328D362D99B6E40048AD2E /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD0D5F9A6753827C2074981 /* Data.framework */; platformFilter = ios; };
+		D14D78592E1E6D2D00D8C24A /* AlarmEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D78582E1E6D2800D8C24A /* AlarmEmptyView.swift */; };
+		D14D785B2E1E6E1D00D8C24A /* AlarmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D785A2E1E6E1700D8C24A /* AlarmListView.swift */; };
+		D14D785D2E1E6FAD00D8C24A /* RepeatDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D785C2E1E6FA800D8C24A /* RepeatDay.swift */; };
+		D14D785F2E1E703300D8C24A /* AlarmUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D785E2E1E702C00D8C24A /* AlarmUtil.swift */; };
+		D14D78612E1E879E00D8C24A /* AlarmScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D78602E1E879A00D8C24A /* AlarmScreen.swift */; };
 		D18192752D243F86003103D1 /* Resolver+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18192732D243F86003103D1 /* Resolver+Injection.swift */; };
 		D192C4FD2E1E24AE0019A118 /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C4FC2E1E24AA0019A118 /* AlarmModel.swift */; };
 		D192C4FF2E1E251C0019A118 /* AlarmAudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C4FE2E1E25160019A118 /* AlarmAudioModel.swift */; };
@@ -87,6 +92,9 @@
 		D192C5172E1E3C660019A118 /* GetAlarmByIdUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C5162E1E3C650019A118 /* GetAlarmByIdUseCase.swift */; };
 		D192C5192E1E3CA70019A118 /* ObserveAlarmsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C5182E1E3CA50019A118 /* ObserveAlarmsUseCase.swift */; };
 		D192C51B2E1E3CF20019A118 /* UpdateAlarmUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C51A2E1E3CF10019A118 /* UpdateAlarmUseCase.swift */; };
+		D192C51D2E1E3F460019A118 /* AlarmUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C51C2E1E3F250019A118 /* AlarmUiState.swift */; };
+		D192C51F2E1E3F8C0019A118 /* AlarmSetupUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C51E2E1E3F8B0019A118 /* AlarmSetupUiState.swift */; };
+		D192C5222E1E3FE30019A118 /* TimePickerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C5212E1E3FDC0019A118 /* TimePickerState.swift */; };
 		D1DD02DA2E16D0FC00148CE6 /* GitUserDetailUiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD02D32E16D0FC00148CE6 /* GitUserDetailUiModel.swift */; };
 		D1DD02DB2E16D0FC00148CE6 /* GitUserListUiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD02D42E16D0FC00148CE6 /* GitUserListUiModel.swift */; };
 		D1DD02DD2E16D0FC00148CE6 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = D1DD02D22E16D0FC00148CE6 /* .gitkeep */; };
@@ -125,6 +133,7 @@
 		D1E30CAD2D9ACE5D00AC7872 /* GitUserSample.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1E30CAC2D9ACE5D00AC7872 /* GitUserSample.plist */; };
 		D1E30CAF2D9ACE6400AC7872 /* GitUserSampleTests.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1E30CAE2D9ACE6400AC7872 /* GitUserSampleTests.plist */; };
 		D1F7A173060159C4BD809C77 /* Pods_DesignSystem_DesignSystemTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616714FFD162F6A5397EB61B /* Pods_DesignSystem_DesignSystemTests.framework */; };
+		D1F9B4AE2E1E4AB400C0D097 /* AlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F9B4AD2E1E4AB400C0D097 /* AlarmViewModel.swift */; };
 		D6C90DCB5BD71F0F76B4FEAC /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD0D5F9A6753827C2074981 /* Data.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA5CA649ECAA3E247A3B3C60 /* AlarmMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AB50EA191ED0E7F0A6806D /* AlarmMe.swift */; };
 		ED18AD8D387CAFC126DCC41A /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F05CF29BC6CD4FFF76D970 /* NetworkAPI.swift */; };
@@ -353,6 +362,11 @@
 		D13A781F2D264EDD00882BF5 /* GitUserLocalSourceImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserLocalSourceImplTests.swift; sourceTree = "<group>"; };
 		D13A78232D26518400882BF5 /* GitUserDetailLocalSourceImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserDetailLocalSourceImplTests.swift; sourceTree = "<group>"; };
 		D13A78272D26525C00882BF5 /* GitUserConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserConfigurationTests.swift; sourceTree = "<group>"; };
+		D14D78582E1E6D2800D8C24A /* AlarmEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmEmptyView.swift; sourceTree = "<group>"; };
+		D14D785A2E1E6E1700D8C24A /* AlarmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListView.swift; sourceTree = "<group>"; };
+		D14D785C2E1E6FA800D8C24A /* RepeatDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatDay.swift; sourceTree = "<group>"; };
+		D14D785E2E1E702C00D8C24A /* AlarmUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmUtil.swift; sourceTree = "<group>"; };
+		D14D78602E1E879A00D8C24A /* AlarmScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmScreen.swift; sourceTree = "<group>"; };
 		D18191952D22C7AB003103D1 /* GitUserConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserConfiguration.swift; sourceTree = "<group>"; };
 		D181919E2D22CB5F003103D1 /* GitUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUser.swift; sourceTree = "<group>"; };
 		D18191A02D22CB9F003103D1 /* GitUserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserDetail.swift; sourceTree = "<group>"; };
@@ -403,6 +417,9 @@
 		D192C5162E1E3C650019A118 /* GetAlarmByIdUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlarmByIdUseCase.swift; sourceTree = "<group>"; };
 		D192C5182E1E3CA50019A118 /* ObserveAlarmsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveAlarmsUseCase.swift; sourceTree = "<group>"; };
 		D192C51A2E1E3CF10019A118 /* UpdateAlarmUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAlarmUseCase.swift; sourceTree = "<group>"; };
+		D192C51C2E1E3F250019A118 /* AlarmUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmUiState.swift; sourceTree = "<group>"; };
+		D192C51E2E1E3F8B0019A118 /* AlarmSetupUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSetupUiState.swift; sourceTree = "<group>"; };
+		D192C5212E1E3FDC0019A118 /* TimePickerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerState.swift; sourceTree = "<group>"; };
 		D1DD02D22E16D0FC00148CE6 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		D1DD02D32E16D0FC00148CE6 /* GitUserDetailUiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserDetailUiModel.swift; sourceTree = "<group>"; };
 		D1DD02D42E16D0FC00148CE6 /* GitUserListUiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserListUiModel.swift; sourceTree = "<group>"; };
@@ -436,6 +453,7 @@
 		D1E30CAA2D9ACE5600AC7872 /* DesignSystemTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DesignSystemTests.plist; sourceTree = "<group>"; };
 		D1E30CAC2D9ACE5D00AC7872 /* GitUserSample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GitUserSample.plist; sourceTree = "<group>"; };
 		D1E30CAE2D9ACE6400AC7872 /* GitUserSampleTests.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GitUserSampleTests.plist; sourceTree = "<group>"; };
+		D1F9B4AD2E1E4AB400C0D097 /* AlarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewModel.swift; sourceTree = "<group>"; };
 		D430D10F2111B586EA954A85 /* Pods-DesignSystem-DesignSystemTests.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignSystem-DesignSystemTests.release staging.xcconfig"; path = "Target Support Files/Pods-DesignSystem-DesignSystemTests/Pods-DesignSystem-DesignSystemTests.release staging.xcconfig"; sourceTree = "<group>"; };
 		DB3EB97F9E7EC8C158F4C6D6 /* Pods-DesignSystem-DesignSystemTests.debug staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignSystem-DesignSystemTests.debug staging.xcconfig"; path = "Target Support Files/Pods-DesignSystem-DesignSystemTests/Pods-DesignSystem-DesignSystemTests.debug staging.xcconfig"; sourceTree = "<group>"; };
 		DE196B127EDCC772AE46548B /* KIFSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIFSpec.swift; sourceTree = "<group>"; };
@@ -1104,6 +1122,15 @@
 			path = RequestConfiguration;
 			sourceTree = "<group>";
 		};
+		D14D78572E1E6D1700D8C24A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D14D785A2E1E6E1700D8C24A /* AlarmListView.swift */,
+				D14D78582E1E6D2800D8C24A /* AlarmEmptyView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		D18191922D22C69C003103D1 /* RequestConfiguration */ = {
 			isa = PBXGroup;
 			children = (
@@ -1257,9 +1284,20 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		D192C5202E1E3FCF0019A118 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				D192C5212E1E3FDC0019A118 /* TimePickerState.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		D1DD02D52E16D0FC00148CE6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D14D785C2E1E6FA800D8C24A /* RepeatDay.swift */,
+				D192C51E2E1E3F8B0019A118 /* AlarmSetupUiState.swift */,
+				D192C51C2E1E3F250019A118 /* AlarmUiState.swift */,
 				D1DD02D22E16D0FC00148CE6 /* .gitkeep */,
 				D1DD02D32E16D0FC00148CE6 /* GitUserDetailUiModel.swift */,
 				D1DD02D42E16D0FC00148CE6 /* GitUserListUiModel.swift */,
@@ -1270,6 +1308,7 @@
 		D1DD02D92E16D0FC00148CE6 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D14D785E2E1E702C00D8C24A /* AlarmUtil.swift */,
 				D1DD02FD2E16D81500148CE6 /* Screens */,
 				D1DD02E12E16D1C700148CE6 /* Mapper */,
 				D1DD02D52E16D0FC00148CE6 /* Models */,
@@ -1341,6 +1380,8 @@
 		D1DD02FD2E16D81500148CE6 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D1F9B4AC2E1E4A8600C0D097 /* AlarmList */,
+				D192C5202E1E3FCF0019A118 /* Component */,
 				D1DD02F32E16D81500148CE6 /* GitUser */,
 				D1DD02FC2E16D81500148CE6 /* GitUserDetail */,
 			);
@@ -1430,6 +1471,16 @@
 				D1DD032E2E16E5BC00148CE6 /* ViewModels */,
 			);
 			path = Presentations;
+			sourceTree = "<group>";
+		};
+		D1F9B4AC2E1E4A8600C0D097 /* AlarmList */ = {
+			isa = PBXGroup;
+			children = (
+				D14D78572E1E6D1700D8C24A /* Components */,
+				D1F9B4AD2E1E4AB400C0D097 /* AlarmViewModel.swift */,
+				D14D78602E1E879A00D8C24A /* AlarmScreen.swift */,
+			);
+			path = AlarmList;
 			sourceTree = "<group>";
 		};
 		D237A8B371A2A51DCDD70BAC /* Data */ = {
@@ -2361,9 +2412,12 @@
 				D1DD03002E16D81500148CE6 /* GitUserDetailAction.swift in Sources */,
 				D1DD03012E16D81500148CE6 /* GitUserDetailFollows.swift in Sources */,
 				D1DD03022E16D81500148CE6 /* GitUserDetailCard.swift in Sources */,
+				D14D78592E1E6D2D00D8C24A /* AlarmEmptyView.swift in Sources */,
 				D1DD03032E16D81500148CE6 /* GitUserDetailBlog.swift in Sources */,
 				D192C5172E1E3C660019A118 /* GetAlarmByIdUseCase.swift in Sources */,
 				D1DD03042E16D81500148CE6 /* GitUserListCard.swift in Sources */,
+				D192C51F2E1E3F8C0019A118 /* AlarmSetupUiState.swift in Sources */,
+				D14D785D2E1E6FAD00D8C24A /* RepeatDay.swift in Sources */,
 				D1DD03052E16D81500148CE6 /* GitUserListEmpty.swift in Sources */,
 				D192C5192E1E3CA70019A118 /* ObserveAlarmsUseCase.swift in Sources */,
 				D1DD03062E16D81500148CE6 /* GitUserListAction.swift in Sources */,
@@ -2380,10 +2434,15 @@
 				D102D6CA2D99B27600FE5A50 /* GetGitUserDetailRemoteUseCase.swift in Sources */,
 				D102D6CB2D99B27600FE5A50 /* GitUserRepository.swift in Sources */,
 				D192C5032E1E26920019A118 /* DatetimeUtil.swift in Sources */,
+				D192C51D2E1E3F460019A118 /* AlarmUiState.swift in Sources */,
 				D102D6CC2D99B27600FE5A50 /* GitUser.swift in Sources */,
+				D14D785B2E1E6E1D00D8C24A /* AlarmListView.swift in Sources */,
+				D14D785F2E1E703300D8C24A /* AlarmUtil.swift in Sources */,
 				D102D6CD2D99B27600FE5A50 /* GitUserLocalSource.swift in Sources */,
+				D14D78612E1E879E00D8C24A /* AlarmScreen.swift in Sources */,
 				D102D6CE2D99B27600FE5A50 /* GitUserDetailLocalSource.swift in Sources */,
 				D102D6CF2D99B27600FE5A50 /* GitUserDetailRepository.swift in Sources */,
+				D1F9B4AE2E1E4AB400C0D097 /* AlarmViewModel.swift in Sources */,
 				D102D6D02D99B27600FE5A50 /* GitUserDetail.swift in Sources */,
 				D102D6D12D99B27600FE5A50 /* GitUserModel.swift in Sources */,
 				D102D6D22D99B27600FE5A50 /* GitUserDetailRepositoryImpl.swift in Sources */,
@@ -2397,6 +2456,7 @@
 				D102D6D42D99B27600FE5A50 /* GetGitUserUseCase.swift in Sources */,
 				D192C5062E1E2B9B0019A118 /* AlarmRepository.swift in Sources */,
 				D1DD030E2E16DA8E00148CE6 /* GitUserModule.swift in Sources */,
+				D192C5222E1E3FE30019A118 /* TimePickerState.swift in Sources */,
 				D192C4FD2E1E24AE0019A118 /* AlarmModel.swift in Sources */,
 				D1DD02DA2E16D0FC00148CE6 /* GitUserDetailUiModel.swift in Sources */,
 				D1DD02DB2E16D0FC00148CE6 /* GitUserListUiModel.swift in Sources */,

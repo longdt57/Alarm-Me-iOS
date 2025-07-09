@@ -7,6 +7,9 @@
 
 import Foundation
 
+import Foundation
+import Combine
+
 final class CreateAlarmUseCase {
     private let alarmRepository: AlarmRepository
     private let alarmClockHelper: AlarmClockHelper
@@ -16,9 +19,20 @@ final class CreateAlarmUseCase {
         self.alarmClockHelper = alarmClockHelper
     }
     
-    func execute(alarm: AlarmModel) async throws -> AlarmModel {
-        let created = try await self.alarmRepository.createAlarm(alarm)
-        self.alarmClockHelper.setupAlarmClock(created)
-        return created
+    func invoke(alarm: AlarmModel) -> AnyPublisher<AlarmModel, Error> {
+        Future<AlarmModel, Error> { [weak self] promise in
+            guard let self = self else { return }
+            
+            Task {
+                do {
+                    let created = try await self.alarmRepository.createAlarm(alarm)
+                    self.alarmClockHelper.setupAlarmClock(created)
+                    promise(.success(created))
+                } catch {
+                    promise(.failure(error))
+                }
+            }
+        }
+        .eraseToAnyPublisher()
     }
 }

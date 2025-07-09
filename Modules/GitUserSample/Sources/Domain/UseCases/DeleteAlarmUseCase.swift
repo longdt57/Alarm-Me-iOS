@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 final class DeleteAlarmUseCase {
     private let alarmRepository: AlarmRepository
@@ -19,8 +20,20 @@ final class DeleteAlarmUseCase {
         self.alarmClockHelper = alarmClockHelper
     }
     
-    func execute(alarmId: Int) async throws{
-        guard let alarm = try await alarmRepository.getAlarmById(id: alarmId) else { return }
-        alarmClockHelper.cancelAlarm(alarm)
+    func invoke(alarm: AlarmModel) -> AnyPublisher<Void, Error> {
+        Future<Void, Error> { [weak self] promise in
+            guard let self = self else { return }
+            
+            Task {
+                do {
+                    let _ = try await self.alarmRepository.deleteAlarm(id: alarm.id)
+                    self.alarmClockHelper.cancelAlarm(alarm)
+                    promise(.success(()))
+                } catch {
+                    promise(.failure(error))
+                }
+            }
+        }
+        .eraseToAnyPublisher()
     }
 }
