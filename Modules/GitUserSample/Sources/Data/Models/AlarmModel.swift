@@ -14,11 +14,37 @@ public class AlarmModel: Object, Codable {
     @Persisted var createdAt: String?
     @Persisted var isEnabled: Bool
     @Persisted var label: String?
-    @Persisted var repeatDays: List<Int>
+    @Persisted var repeatDays: String?
     @Persisted var snoozeEnabled: Bool?
     @Persisted var timeOfDay: String?
     @Persisted var updatedAt: String?
     @Persisted var vibrate: Bool?
+    
+    convenience init(
+        id: Int,
+        audio: AlarmAudioModel? = nil,
+        createdAt: String? = nil,
+        isEnabled: Bool,
+        label: String? = nil,
+        repeatDays: String? = nil,
+        snoozeEnabled: Bool? = nil,
+        timeOfDay: String? = nil,
+        updatedAt: String? = nil,
+        vibrate: Bool? = nil
+    ) {
+        self.init()
+        self.id = id
+        self.audio = audio
+        self.createdAt = createdAt
+        self.isEnabled = isEnabled
+        self.label = label
+        self.repeatDays = repeatDays
+        self.snoozeEnabled = snoozeEnabled
+        self.timeOfDay = timeOfDay
+        self.updatedAt = updatedAt
+        self.vibrate = vibrate
+    }
+
     
     // MARK: - Ignored Properties
     public override static func ignoredProperties() -> [String] {
@@ -40,7 +66,7 @@ public class AlarmModel: Object, Codable {
     }
     
     func isRecurring() -> Bool {
-        return !repeatDays.isEmpty
+        return !repeatDays.isNilOrBlank()
     }
     
     func isToday() -> Bool {

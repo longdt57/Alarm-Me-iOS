@@ -45,3 +45,13 @@ func getAlarmRepeatDisplayText(
     
     return mapped.map { dayResources[$0 % 7] }.joined(separator: ", ")
 }
+
+func toRepeatDayString(_ repeatDays: [Int]) -> String {
+    return repeatDays.map(String.init).joined(separator: ",")
+}
+
+func fromRepeatDayString(_ repeatDayString: String) -> [Int] {
+    return repeatDayString
+        .split(separator: ",")
+        .compactMap { Int($0.trimmingCharacters(in: .whitespaces)) }
+}

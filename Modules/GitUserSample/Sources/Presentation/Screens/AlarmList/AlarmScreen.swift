@@ -12,13 +12,15 @@ public struct AlarmScreen: View {
     
     public init() {}
     
+    @State private var showingAlarmSetup = false
+    
     @StateObject var viewModel: AlarmViewModel = Resolver.resolve()
     
     public var body: some View {
         NavigationView {
             VStack {
                 if viewModel.uiState.alarms.isEmpty.not() {
-                    userListView()
+                    alarmListView()
                 } else if viewModel.isLoading().not() {
                     AlarmEmptyView()
                 }
@@ -35,11 +37,25 @@ public struct AlarmScreen: View {
             .onAppear {
             }
             .navigationTitle(R.string.localizable.alarm())
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        // Navigate or present AlarmSetupScreen
+//                        viewModel.navigateToAlarmSetupScreen()
+                        showingAlarmSetup = true
+                    }) {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+            .sheet(isPresented: $showingAlarmSetup) {
+                AlarmSetupScreen()
+            }
             .navigationBarTitleDisplayMode(.inline)
         }
     }
     
-    private func userListView() -> some View {
+    private func alarmListView() -> some View {
         AlarmListView(
             alarms: viewModel.uiState.alarms,
             onDelete: { viewModel.deleteAlarm(alarm: $0) },

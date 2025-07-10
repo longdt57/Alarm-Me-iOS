@@ -78,6 +78,13 @@
 		D14D785D2E1E6FAD00D8C24A /* RepeatDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D785C2E1E6FA800D8C24A /* RepeatDay.swift */; };
 		D14D785F2E1E703300D8C24A /* AlarmUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D785E2E1E702C00D8C24A /* AlarmUtil.swift */; };
 		D14D78612E1E879E00D8C24A /* AlarmScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D78602E1E879A00D8C24A /* AlarmScreen.swift */; };
+		D14D78632E1EB7D700D8C24A /* AlarmSetupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D78622E1EB7D400D8C24A /* AlarmSetupScreen.swift */; };
+		D14D78652E1EB83C00D8C24A /* AlarmSetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D78642E1EB83700D8C24A /* AlarmSetupViewModel.swift */; };
+		D14D78692E1EBAEE00D8C24A /* AlarmSetupSnoozeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D78682E1EBAED00D8C24A /* AlarmSetupSnoozeView.swift */; };
+		D14D786B2E1EBB1C00D8C24A /* AlarmSetupItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D786A2E1EBAF800D8C24A /* AlarmSetupItemView.swift */; };
+		D14D786D2E1EBB9400D8C24A /* AlarmSetupItemLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D786C2E1EBB9300D8C24A /* AlarmSetupItemLabel.swift */; };
+		D14D786F2E1EBC3800D8C24A /* AlarmSetupScreenContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D786E2E1EBC3200D8C24A /* AlarmSetupScreenContent.swift */; };
+		D14D78712E1EBD3C00D8C24A /* TimePickerWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D78702E1EBD3100D8C24A /* TimePickerWheel.swift */; };
 		D18192752D243F86003103D1 /* Resolver+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18192732D243F86003103D1 /* Resolver+Injection.swift */; };
 		D192C4FD2E1E24AE0019A118 /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C4FC2E1E24AA0019A118 /* AlarmModel.swift */; };
 		D192C4FF2E1E251C0019A118 /* AlarmAudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192C4FE2E1E25160019A118 /* AlarmAudioModel.swift */; };
@@ -367,6 +374,13 @@
 		D14D785C2E1E6FA800D8C24A /* RepeatDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatDay.swift; sourceTree = "<group>"; };
 		D14D785E2E1E702C00D8C24A /* AlarmUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmUtil.swift; sourceTree = "<group>"; };
 		D14D78602E1E879A00D8C24A /* AlarmScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmScreen.swift; sourceTree = "<group>"; };
+		D14D78622E1EB7D400D8C24A /* AlarmSetupScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSetupScreen.swift; sourceTree = "<group>"; };
+		D14D78642E1EB83700D8C24A /* AlarmSetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSetupViewModel.swift; sourceTree = "<group>"; };
+		D14D78682E1EBAED00D8C24A /* AlarmSetupSnoozeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSetupSnoozeView.swift; sourceTree = "<group>"; };
+		D14D786A2E1EBAF800D8C24A /* AlarmSetupItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSetupItemView.swift; sourceTree = "<group>"; };
+		D14D786C2E1EBB9300D8C24A /* AlarmSetupItemLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSetupItemLabel.swift; sourceTree = "<group>"; };
+		D14D786E2E1EBC3200D8C24A /* AlarmSetupScreenContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSetupScreenContent.swift; sourceTree = "<group>"; };
+		D14D78702E1EBD3100D8C24A /* TimePickerWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerWheel.swift; sourceTree = "<group>"; };
 		D18191952D22C7AB003103D1 /* GitUserConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserConfiguration.swift; sourceTree = "<group>"; };
 		D181919E2D22CB5F003103D1 /* GitUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUser.swift; sourceTree = "<group>"; };
 		D18191A02D22CB9F003103D1 /* GitUserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUserDetail.swift; sourceTree = "<group>"; };
@@ -1131,6 +1145,28 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		D14D78662E1EBADC00D8C24A /* AlarmSetup */ = {
+			isa = PBXGroup;
+			children = (
+				D14D78672E1EBAE700D8C24A /* Components */,
+				D14D78642E1EB83700D8C24A /* AlarmSetupViewModel.swift */,
+				D14D78622E1EB7D400D8C24A /* AlarmSetupScreen.swift */,
+			);
+			path = AlarmSetup;
+			sourceTree = "<group>";
+		};
+		D14D78672E1EBAE700D8C24A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D14D78702E1EBD3100D8C24A /* TimePickerWheel.swift */,
+				D14D786E2E1EBC3200D8C24A /* AlarmSetupScreenContent.swift */,
+				D14D786C2E1EBB9300D8C24A /* AlarmSetupItemLabel.swift */,
+				D14D786A2E1EBAF800D8C24A /* AlarmSetupItemView.swift */,
+				D14D78682E1EBAED00D8C24A /* AlarmSetupSnoozeView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		D18191922D22C69C003103D1 /* RequestConfiguration */ = {
 			isa = PBXGroup;
 			children = (
@@ -1380,6 +1416,7 @@
 		D1DD02FD2E16D81500148CE6 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D14D78662E1EBADC00D8C24A /* AlarmSetup */,
 				D1F9B4AC2E1E4A8600C0D097 /* AlarmList */,
 				D192C5202E1E3FCF0019A118 /* Component */,
 				D1DD02F32E16D81500148CE6 /* GitUser */,
@@ -2430,7 +2467,9 @@
 				D1DD030B2E16D81500148CE6 /* GitUserDetailScreen.swift in Sources */,
 				D192C5152E1E39650019A118 /* DeleteAlarmUseCase.swift in Sources */,
 				D192C5122E1E37C70019A118 /* AlarmClockHelper.swift in Sources */,
+				D14D78632E1EB7D700D8C24A /* AlarmSetupScreen.swift in Sources */,
 				D102D6C92D99B27600FE5A50 /* GitUserDetailModel.swift in Sources */,
+				D14D78712E1EBD3C00D8C24A /* TimePickerWheel.swift in Sources */,
 				D102D6CA2D99B27600FE5A50 /* GetGitUserDetailRemoteUseCase.swift in Sources */,
 				D102D6CB2D99B27600FE5A50 /* GitUserRepository.swift in Sources */,
 				D192C5032E1E26920019A118 /* DatetimeUtil.swift in Sources */,
@@ -2450,13 +2489,18 @@
 				D1DD02E22E16D1C700148CE6 /* FollowerFormatter.swift in Sources */,
 				D1DD03232E16E07B00148CE6 /* R.generated.swift in Sources */,
 				D192C50C2E1E33C70019A118 /* AlarmAudioLocalSource.swift in Sources */,
+				D14D786F2E1EBC3800D8C24A /* AlarmSetupScreenContent.swift in Sources */,
 				D192C50F2E1E371D0019A118 /* CreateAlarmUseCase.swift in Sources */,
+				D14D78652E1EB83C00D8C24A /* AlarmSetupViewModel.swift in Sources */,
+				D14D786B2E1EBB1C00D8C24A /* AlarmSetupItemView.swift in Sources */,
 				D1DD02E32E16D1C700148CE6 /* GitUserDetailUiMapper.swift in Sources */,
 				D102D6D32D99B27600FE5A50 /* GetGitUserDetailLocalUseCase.swift in Sources */,
 				D102D6D42D99B27600FE5A50 /* GetGitUserUseCase.swift in Sources */,
 				D192C5062E1E2B9B0019A118 /* AlarmRepository.swift in Sources */,
 				D1DD030E2E16DA8E00148CE6 /* GitUserModule.swift in Sources */,
+				D14D786D2E1EBB9400D8C24A /* AlarmSetupItemLabel.swift in Sources */,
 				D192C5222E1E3FE30019A118 /* TimePickerState.swift in Sources */,
+				D14D78692E1EBAEE00D8C24A /* AlarmSetupSnoozeView.swift in Sources */,
 				D192C4FD2E1E24AE0019A118 /* AlarmModel.swift in Sources */,
 				D1DD02DA2E16D0FC00148CE6 /* GitUserDetailUiModel.swift in Sources */,
 				D1DD02DB2E16D0FC00148CE6 /* GitUserListUiModel.swift in Sources */,

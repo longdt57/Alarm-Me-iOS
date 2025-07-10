@@ -9,9 +9,9 @@ import SwiftUI
 
 struct AlarmEmptyView: View {
     var body: some View {
-        Text(NSLocalizedString("no_alarms", comment: ""))
+        Text(R.string.localizable.no_alarms())
     }
 }
 #Preview {
-    
+    AlarmEmptyView()
 }

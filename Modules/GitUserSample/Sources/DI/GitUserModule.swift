@@ -71,6 +71,9 @@ extension Resolver {
         register(AlarmViewModel.self) {
             AlarmViewModel(dispatchQueueProvider: resolve(), observeAlarmsUseCase: resolve(), deleteAlarmUseCase: resolve(), toggleAlarmUseCase: resolve())
         }
+        register(AlarmSetupViewModel.self) {
+            AlarmSetupViewModel(dispatchQueueProvider: resolve(), getAlarmByIdUseCase: resolve(), createAlarmUseCase: resolve(), updateAlarmUseCase: resolve(), deleteAlarmUseCase: resolve())
+        }
     }
 
     private static func registerMappers() {

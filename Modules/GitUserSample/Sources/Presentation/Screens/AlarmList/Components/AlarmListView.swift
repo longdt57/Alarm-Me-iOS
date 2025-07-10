@@ -15,7 +15,6 @@ struct AlarmListView: View {
     
     var body: some View {
         List {
-            Spacer().frame(height: 24)
             
             ForEach(alarms, id: \.id) { alarm in
                 SwipeToDeleteItem(
@@ -26,10 +25,8 @@ struct AlarmListView: View {
                 )
                 .listRowSeparator(.hidden)
             }
-            
-            Spacer().frame(height: 24)
         }
-        .listStyle(.plain)
+        .listStyle(.automatic)
     }
 }
 
@@ -40,26 +37,17 @@ struct SwipeToDeleteItem: View {
     var onItemClick: (AlarmModel) -> Void
     
     var body: some View {
-        ZStack {
-            // Red background delete button
-            HStack {
-                Spacer()
-                Button(action: { onDelete(alarm) }) {
-                    Text("Delete")
-                        .frame(width: 80, height: 76)
-                        .foregroundColor(.white)
-                        .background(Color.red)
-                        .cornerRadius(10)
-                }
+        AlarmItemView(
+            alarm: alarm,
+            onCheckedChange: { _ in onCheckedChange(alarm) },
+            onItemClick: { onItemClick(alarm) }
+        )
+        .swipeActions(edge: .trailing) {
+            Button(role: .destructive) {
+                onDelete(alarm)
+            } label: {
+                Label(R.string.localizable.delete(), systemImage: "trash")
             }
-            
-            // Foreground alarm item
-            AlarmItemView(
-                alarm: alarm,
-                onCheckedChange: { _ in onCheckedChange(alarm) },
-                onItemClick: { onItemClick(alarm) }
-            )
-            .background(Color.white)
         }
         .padding(.horizontal, 16)
     }
@@ -94,16 +82,13 @@ struct AlarmItemView: View {
                     ))
                     .labelsHidden()
                 }
-                .padding(.vertical, 24)
-                .padding(.horizontal, 32)
             }
-            
-            Divider().padding(.horizontal, 32)
+            .frame(height: 76)
         }
     }
     
     private func getDisplayText(alarm: AlarmModel) -> String {
-        let repeatText = getAlarmRepeatDisplayText(Array(alarm.repeatDays))
+        let repeatText = getAlarmRepeatDisplayText(fromRepeatDayString(alarm.repeatDays.orEmpty()))
         return repeatText.isEmpty ? alarm.label ?? "" : "\(alarm.label ?? ""), \(repeatText)"
     }
 }
