@@ -18,16 +18,14 @@ struct AlarmSetupScreen: View {
 //    @State private var bottomSheet: AlarmSetupBottomSheet?
     @State private var checkNotificationPermissionAndSave = false
     
+    init (alarmModel: AlarmModel? = nil) {
+        viewModel.loadAlarmData(alarm: alarmModel)
+    }
+    
     var body: some View {
         VStack(spacing: 0) {
             // Top Bar
             HStack {
-                Button(action: {
-                    presentationMode.wrappedValue.dismiss()
-                }) {
-                    Image(systemName: "chevron.left")
-                        .foregroundColor(.blue)
-                }
                 Spacer()
                 Text(R.string.localizable.setup_alarm())
                     .font(.headline)
@@ -60,7 +58,6 @@ struct AlarmSetupScreen: View {
             )
             .frame(maxWidth: .infinity)
 //            .frame(maxHeight: .infinity)
-            Spacer()
             // Save Button
             Button(action: {
 //                checkNotificationPermissionAndSave = true
@@ -72,6 +69,7 @@ struct AlarmSetupScreen: View {
                     .padding(.vertical, 12)
             }
             .padding(.horizontal, 20)
+            Spacer()
         }
         .showLoading(loadingState: $viewModel.loading)
         .showError(
@@ -79,6 +77,9 @@ struct AlarmSetupScreen: View {
             primaryAction: { viewModel.onErrorPrimaryAction(errorState: $0) },
             secondaryAction: { viewModel.onErrorSecondaryAction(errorState: $0) }
         )
+        .onReceive(viewModel.dismissPublisher) { _ in
+            presentationMode.wrappedValue.dismiss()
+        }
         .onAppear {
             // any init code here
         }

@@ -12,6 +12,7 @@ import DesignSystem
 class AlarmSetupViewModel: BaseViewModel {
     
     @Published var uiState = AlarmSetupUiState()
+    let dismissPublisher = PassthroughSubject<Void, Never>()
     
     private var initialAlarm: AlarmModel? = nil
     
@@ -19,8 +20,8 @@ class AlarmSetupViewModel: BaseViewModel {
     private let createAlarmUseCase: CreateAlarmUseCase
     private let updateAlarmUseCase: UpdateAlarmUseCase
     private let deleteAlarmUseCase: DeleteAlarmUseCase
-//    private let fetchAlarmAudioUseCase: FetchAlarmAudioUseCase
-//    private let observeAlarmAudioUseCase: ObserveAlarmAudioUseCase
+    //    private let fetchAlarmAudioUseCase: FetchAlarmAudioUseCase
+    //    private let observeAlarmAudioUseCase: ObserveAlarmAudioUseCase
     
     init(
         dispatchQueueProvider: DispatchQueueProvider,
@@ -28,47 +29,35 @@ class AlarmSetupViewModel: BaseViewModel {
         createAlarmUseCase: CreateAlarmUseCase,
         updateAlarmUseCase: UpdateAlarmUseCase,
         deleteAlarmUseCase: DeleteAlarmUseCase,
-//        fetchAlarmAudioUseCase: FetchAlarmAudioUseCase,
-//        observeAlarmAudioUseCase: ObserveAlarmAudioUseCase
+        //        fetchAlarmAudioUseCase: FetchAlarmAudioUseCase,
+        //        observeAlarmAudioUseCase: ObserveAlarmAudioUseCase
     ) {
         self.getAlarmByIdUseCase = getAlarmByIdUseCase
         self.createAlarmUseCase = createAlarmUseCase
         self.updateAlarmUseCase = updateAlarmUseCase
         self.deleteAlarmUseCase = deleteAlarmUseCase
-//        self.fetchAlarmAudioUseCase = fetchAlarmAudioUseCase
-//        self.observeAlarmAudioUseCase = observeAlarmAudioUseCase
+        //        self.fetchAlarmAudioUseCase = fetchAlarmAudioUseCase
+        //        self.observeAlarmAudioUseCase = observeAlarmAudioUseCase
         super.init(dispatchQueueProvider: dispatchQueueProvider)
         
-//        fetchAudio()
-//        observeAudio()
+        //        fetchAudio()
+        //        observeAudio()
     }
     
-    func loadAlarmData(alarmId: Int) {
-        dispatchQueueProvider.backgroundQueue.async {
-            Task {
-                do {
-                    if let alarm = try await self.getAlarmByIdUseCase.invoke(id: alarmId) {
-                        var newUiState = self.uiState
-                        newUiState.id = alarm.id
-                        newUiState.label = alarm.label ?? ""
-                        newUiState.timeOfDay = alarm.timeOfDay ?? ""
-                        newUiState.isEnabled = alarm.isEnabled
-                        newUiState.audio = alarm.audio
-                        newUiState.snoozeEnabled = alarm.snoozeEnabled ?? false
-                        newUiState.repeatDays = fromRepeatDayString(alarm.repeatDays.orEmpty())
-                        newUiState.initialTimePickerState = TimePickerState.parseTimeToPickerState(alarm.timeOfDay ?? "")
-                        
-                        self.dispatchQueueProvider.mainQueue.async {
-                            self.initialAlarm = alarm
-                            self.uiState = newUiState
-                        }
-                    }
-                } catch {
-                    self.dispatchQueueProvider.mainQueue.async {
-                        self.handleError(error: error)
-                    }
-                }
-            }
+    func loadAlarmData(alarm: AlarmModel? = nil) {
+        initialAlarm = alarm
+        if let alarm = alarm {
+            var newUiState = self.uiState
+            newUiState.id = alarm.id
+            newUiState.label = alarm.label ?? ""
+            newUiState.timeOfDay = alarm.timeOfDay ?? ""
+            newUiState.isEnabled = alarm.isEnabled
+            newUiState.audio = alarm.audio
+            newUiState.snoozeEnabled = alarm.snoozeEnabled ?? false
+            newUiState.repeatDays = fromRepeatDayString(alarm.repeatDays.orEmpty())
+            newUiState.initialTimePickerState = TimePickerState.parseTimeToPickerState(alarm.timeOfDay ?? "")
+            
+            self.uiState = newUiState
         }
     }
     
@@ -169,25 +158,25 @@ class AlarmSetupViewModel: BaseViewModel {
         }
     }
     
-//    private func fetchAudio() {
-//        fetchAlarmAudioUseCase()
-//            .sink(receiveCompletion: { _ in }, receiveValue: { _ in })
-//            .store(in: &cancellables)
-//    }
+    //    private func fetchAudio() {
+    //        fetchAlarmAudioUseCase()
+    //            .sink(receiveCompletion: { _ in }, receiveValue: { _ in })
+    //            .store(in: &cancellables)
+    //    }
     
-//    private func observeAudio() {
-//        observeAlarmAudioUseCase()
-//            .receive(on: dispatchQueueProvider.mainQueue)
-//            .sink(receiveValue: { audioList in
-//                if self.uiState.audio == nil {
-//                    self.uiState.audio = audioList.first
-//                }
-//                self.uiState.audioList = audioList
-//            })
-//            .store(in: &cancellables)
-//    }
+    //    private func observeAudio() {
+    //        observeAlarmAudioUseCase()
+    //            .receive(on: dispatchQueueProvider.mainQueue)
+    //            .sink(receiveValue: { audioList in
+    //                if self.uiState.audio == nil {
+    //                    self.uiState.audio = audioList.first
+    //                }
+    //                self.uiState.audioList = audioList
+    //            })
+    //            .store(in: &cancellables)
+    //    }
     
     private func navigateUp() {
-        // Trigger navigation back (e.g., via callback or published flag)
+        dismissPublisher.send()
     }
 }

@@ -49,10 +49,25 @@ public class AlarmLocalSourceImpl: AlarmLocalSource {
     
     func upsert(_ alarm: AlarmModel) throws {
         let realm = try getRealm()
+        
         try realm.write {
-            realm.add(alarm, update: .modified)
+            // ✅ Thaw the object if it's frozen
+            guard let mutableAlarm = alarm.isFrozen ? alarm.thaw() : alarm else {
+                throw NSError(domain: "Realm", code: 0, userInfo: [NSLocalizedDescriptionKey: "Cannot thaw frozen object"])
+            }
+            
+            // ✅ Set ID only if it's new
+            if mutableAlarm.id == 0 {
+                let maxId = realm.objects(AlarmModel.self).max(ofProperty: "id") as Int? ?? 0
+                mutableAlarm.id = maxId + 1
+            }
+            
+            // ✅ Add or update
+            realm.add(mutableAlarm, update: .modified)
         }
     }
+
+
     
     func deleteById(_ id: Int) throws {
         let realm = try getRealm()
